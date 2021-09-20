@@ -16,6 +16,7 @@ define nssm::service (
   }
 
   require windows::nssm # Installs NSSM!
+  windows::path { 'C:\Program Files\nssm-2.24\win64': }
 
   # Set Encoding to Unicode due to ascii null character
   # http://grokbase.com/t/gg/salt-users/152vyb5vx1/weird-whitespace-problem-getting-data-out-of-cmd-run-nssm-on-windows
