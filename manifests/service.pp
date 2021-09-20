@@ -33,7 +33,7 @@ define nssm::service (
       notify   => Exec[$restart]
     }
 
-    $compare_params = regsubst($app_parameters, '\"', '"', 'G')
+    $compare_params = regsubst($app_parameters, "\\\"", '"', 'G')
     exec { "set_app_parameters_${service_name}":
       require  => Exec[$install],
       command  => "nssm set '${service_name}' AppParameters '${app_parameters}'",
