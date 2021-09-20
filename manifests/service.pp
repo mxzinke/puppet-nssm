@@ -33,10 +33,11 @@ define nssm::service (
       notify   => Exec[$restart]
     }
 
+    $compare_params = regsubst($app_parameters, '\"', '"', 'G')
     exec { "set_app_parameters_${service_name}":
       require  => Exec[$install],
       command  => "nssm set '${service_name}' AppParameters '${app_parameters}'",
-      unless   => "${fix_encoding} \$VALUE = nssm get '${service_name}' AppParameters; if (\$VALUE.Contains(\"${app_parameters}\")) {exit 0} else {exit 1}",
+      unless   => "${fix_encoding} \$VALUE = nssm get '${service_name}' AppParameters; if (\$VALUE.Contains(\"${compare_params}\")) {exit 0} else {exit 1}",
       provider => powershell,
       notify   => Exec[$restart]
     }
