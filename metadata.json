@@ -8,7 +8,23 @@
   "project_page": "https://github.com/mxzinke/puppet-nssm",
   "issues_url": "https://github.com/mxzinke/puppet-nssm/issues",
   "dependencies": [
-    { "name": "counsyl/windows", "version_requirement": ">= 1.0.2" }
+    {
+      "name": "counsyl/windows",
+      "version_requirement": ">= 1.0.2"
+    }
   ],
-  "operatingsystem_support": [{ "operatingsystem": "Windows" }]
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Windows"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 6.21.0 < 8.0.0"
+    }
+  ],
+  "pdk-version": "2.1.0",
+  "template-url": "pdk-default#2.1.0",
+  "template-ref": "tags/2.1.0-0-ga675ea5"
 }
