@@ -1,6 +1,6 @@
 {
   "name": "mxzinke-nssm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Maximilian Zinke",
   "summary": "Manages NSSM with Puppet",
   "license": "MIT",
