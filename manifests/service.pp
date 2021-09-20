@@ -114,8 +114,6 @@ define nssm::service (
         Exec["set_app_throttle_${service_name}"],
         Exec["set_app_restart_delay_${service_name}"],
         Exec["set_app_exit_${service_name}"],
-        Exec["set_app_stdout_${service_name}"],
-        Exec["set_app_stderr_${service_name}"],
         Exec["set_application_${service_name}"],
         Exec["set_type_${service_name}"]
       ],
