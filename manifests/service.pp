@@ -10,14 +10,6 @@ define nssm::service (
   Optional[String]                      $log_file_path       = undef,
   Integer                               $restart_delay        = 2000
 ) {
-
-  if !($::operatingsystem == 'windows') {
-    fail('The NSSM Module is only supported for Windows Systems!')
-  }
-
-  require windows::nssm # Installs NSSM!
-  windows::path { 'C:\Program Files\nssm-2.24\win64': }
-
   # Set Encoding to Unicode due to ascii null character
   # http://grokbase.com/t/gg/salt-users/152vyb5vx1/weird-whitespace-problem-getting-data-out-of-cmd-run-nssm-on-windows
   $fix_encoding = '[Console]::OutputEncoding = [System.Text.Encoding]::Unicode;'
