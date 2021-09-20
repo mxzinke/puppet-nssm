@@ -1,11 +1,11 @@
 # Creates and manages a service:
 define nssm::service (
   Enum['present', 'stopped', 'absent']  $ensure              = present,
-  String                                $command             = undef,
+  String                                $command,
   String                                $service_name        = $name,
   String                                $service_user        = 'LocalSystem',
   Optional[Sensitive[String]]           $service_pass        = undef,
-  Optional[String]                      $app_parameters      = undef,
+  String                                $app_parameters      = '',
   Boolean                               $service_interactive = false,
   Optional[String]                      $log_file_path       = undef,
   Integer                               $restart_delay        = 2000
