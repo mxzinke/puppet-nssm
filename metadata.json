@@ -1,0 +1,14 @@
+{
+  "name": "mxzinke-nssm",
+  "version": "1.0.0",
+  "author": "Maximilian Zinke",
+  "summary": "Manages NSSM with Puppet",
+  "license": "MIT",
+  "source": "https://github.com/mxzinke/puppet-nssm",
+  "project_page": "https://github.com/mxzinke/puppet-nssm",
+  "issues_url": "https://github.com/mxzinke/puppet-nssm/issues",
+  "dependencies": [
+    { "name": "counsyl/windows", "version_requirement": ">= 1.0.2" }
+  ],
+  "operatingsystem_support": [{ "operatingsystem": "Windows" }]
+}
